@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkling Effect with Colorful Particles</title>
+   
+</head>
+<body>
+    <script>
+        // Function to generate particles
+        function createParticle(x, y) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            document.body.appendChild(particle);
+
+            // Set the initial position of the particle
+            particle.style.left = `${x}px`;
+            particle.style.top = `${y}px`;
+
+            // Randomize the direction and distance of the particle movement
+            const angle = Math.random() * 360;
+            const distance = Math.random() * 100 + 50;
+            particle.style.setProperty('--x-move', `${Math.cos(angle) * distance}px`);
+            particle.style.setProperty('--y-move', `${Math.sin(angle) * distance}px`);
+
+            // Randomize the color of the particle
+            const colors = [
+                'rgba(0, 128, 255, 1)',  // Blue
+                'rgba(0, 255, 255, 1)',  // Cyan
+                'rgba(255, 0, 150, 1)',  // Pink
+                'rgba(255, 215, 0, 1)',  // Gold
+                'rgba(0, 255, 127, 1)',  // Spring Green
+            ];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            particle.style.background = `radial-gradient(circle, ${randomColor} 0%, ${randomColor} 100%)`;
+
+            // Remove the particle after the animation completes
+            particle.addEventListener('animationend', () => {
+                particle.remove();
+            });
+        }
+
+        // Event listener for mouse movement (or touch)
+        document.addEventListener('mousemove', function(e) {
+            for (let i = 0; i < 5; i++) { // Generate multiple particles
+                createParticle(e.pageX, e.pageY);
+            }
+        });
+    </script>
+</body>
+</html>

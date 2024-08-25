@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet">
+    <title>Typing Effect Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        #home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+        .typing-container {
+            font-size: 2em;
+            font-weight: bold;
+            color: #42a8ec;
+        }
+        
+        /* Base style for particles */
+        .particle {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle, rgba(0, 128, 255, 1) 0%, rgba(0, 255, 255, 1) 100%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkle 0.8s forwards;
+            opacity: 0.8;
+            z-index: 9999;
+        }
+        .bold{ font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-weight:5px;
+  font-style: normal;
+}
+        
+
+        /* Keyframe for the sparkle effect */
+        @keyframes sparkle {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--x-move), var(--y-move)) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="navbar">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#works">MY WORKS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+        
+        <section id="home">
+        
+            <div class="info">
+                <h2 CLASS="pacifico-regular">Hi im Princy Dhanciya</h2>
+                <h3 CLASS="bold">I'm a college student passionate about web development. <br>
+                  As a full-stack developer specializing in the MERN stack, I create websites that help businesses
+                    <br> excel online. Had a great passion for web developing with a strong foundation of HTML, CSS, and Javascript! 
+                </h3>
+                <div class="typing-container">
+                    <span class="multiText"></span>
+                </div>
+                <a href="#">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Hire Me</span>
+                </a>
+                
+         
+            </div>
+        </section>
+            
+        
+            <script>
+                var typingEffect = new Typed(".multiText", {
+                    strings: ["Programmer", "Designer", "Coding Enthusiast", "Fullstack Developer", "From INDIA."],
+                    loop: true,
+                    typeSpeed: 100,
+                    backSpeed: 80,
+                    backDelay: 2000,
+                });
+            </script>
+        
+
+
+        <div class="image">
+            <img src="pic/round1 (1).png" class="girl">
+        </div>
+
+        <div class="icons1">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com/festa_gurll" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+    </div>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="long">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill"><i class="fab fa-react"></i> React</div>
+            <div class="skill"><i class="fas fa-database"></i> MySQL</div>
+            <div class="skill"><i class="fab fa-php"></i> PHP</div>
+            <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+            <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+            <div class="skill"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill"><i class="fas fa-server"></i> Express.js</div>
+            <div class="skill"><i class="fas fa-leaf"></i> MongoDB</div>
+        </div>
+    </section>
+
+    <!-- My Works Section -->
+    <section id="works" class="section works-section">
+        <h2 class="long">My Works</h2>
+        <div class="works-container">
+            <div class="work">
+                <div class="work-content">
+                    <div class="image-container">
+                        <div class="floating-box"></div>
+                        <img src="pic/work.jpg" alt="Event Management System">
+                    </div>
+                    <div class="description-container">
+                        <p>Event Management System</p>
+                        <div class="icons">
+                            <i class="fab fa-php"></i>
+                            <i class="fas fa-database"></i>
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical-line"></div>
+            </div>
+            
+            <div class="work reverse">
+                <div class="work-content">
+                    <div class="image-container">
+                        <div class="floating-box"></div>
+                        <img src="pic/Order food-bro.png" alt="Recipe Sharing Website">
+                    </div>
+                    <div class="description-container">
+                        <p>Recipe Sharing Website</p>
+                        <div class="icons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical-line"></div>
+            </div>
+    
+            <div class="work">
+                <div class="work-content">
+                    <div class="image-container">
+                        <div class="floating-box"></div>
+                        <img src="pic/Weather-cuate.png" alt="Weather App">
+                    </div>
+                    <div class="description-container">
+                        <p>Weather App</p>
+                        <div class="icons">
+                            <i class="fab fa-react"></i>
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical-line"></div>
+            </div>
+    
+            <div class="work reverse">
+                <div class="work-content">
+                    <div class="image-container">
+                        <div class="floating-box"></div>
+                        <img src="pic/Chef-bro.png" alt="Food Ordering Website">
+                    </div>
+                    <div class="description-container">
+                        <p>Food Ordering Website</p>
+                        <div class="icons">
+                            <i class="fab fa-react"></i>
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical-line"></div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        
+        <form action="#" method="post" class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button> 
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Princy. All rights reserved.</p>
+    </footer>
+    <script>
+        // Function to generate particles
+        function createParticle(x, y) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            document.body.appendChild(particle);
+
+            // Set the initial position of the particle
+            particle.style.left = `${x}px`;
+            particle.style.top = `${y}px`;
+
+            // Randomize the direction and distance of the particle movement
+            const angle = Math.random() * 360;
+            const distance = Math.random() * 100 + 50;
+            particle.style.setProperty('--x-move', `${Math.cos(angle) * distance}px`);
+            particle.style.setProperty('--y-move', `${Math.sin(angle) * distance}px`);
+
+            // Randomize the color of the particle
+            const colors = [
+                'rgba(0, 128, 255, 1)',  // Blue
+                'rgba(0, 255, 255, 1)',  // Cyan
+                'rgba(255, 0, 150, 1)',  // Pink
+                'rgba(255, 215, 0, 1)',  // Gold
+                'rgba(0, 255, 127, 1)',  // Spring Green
+            ];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            particle.style.background = `radial-gradient(circle, ${randomColor} 0%, ${randomColor} 100%)`;
+
+            // Remove the particle after the animation completes
+            particle.addEventListener('animationend', () => {
+                particle.remove();
+            });
+        }
+
+        // Event listener for mouse movement (or touch)
+        document.addEventListener('mousemove', function(e) {
+            for (let i = 0; i < 5; i++) { // Generate multiple particles
+                createParticle(e.pageX, e.pageY);
+            }
+        });</script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
